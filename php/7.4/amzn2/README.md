@@ -3,7 +3,7 @@
 ## Build
 
 ```bash
-docker build -t php:7.4-amzn2 .
+docker build -t ishiahirake/php:7.4-amzn2 .
 ```
 
 ## Info
