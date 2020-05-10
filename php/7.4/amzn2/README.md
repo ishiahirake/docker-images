@@ -1,5 +1,7 @@
 # Amazone Linux 2 based PHP 7.4
 
+**This image is intended for development use** as it enables **xdebug**.
+
 ## Build
 
 ```bash
@@ -8,7 +10,11 @@ docker build -t ishiahirake/php:7.4-amzn2 .
 
 ## Info
 
-This container contains following extensions:
+The php-fpm will listen on `0.0.0.0:9000`.
+
+### Extensions
+
+This image contains the following extensions:
 
 ```text
 [PHP Modules]
@@ -56,5 +62,6 @@ zip
 zlib
 
 [Zend Modules]
+Xdebug
 Zend OPcache
 ```
