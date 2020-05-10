@@ -2,7 +2,8 @@ FROM amazonlinux:2
 
 RUN amazon-linux-extras enable php7.4 \
     && yum clean metadata \
-    && yum install -y php-cli php-pdo php-fpm php-json php-mbstring php-mysqlnd php-opcache php-xml php-devel php-pear gcc make \
+    && yum install -y php-cli php-pdo php-fpm php-json php-mbstring php-mysqlnd php-opcache php-xml \
+       php-devel php-pear gcc make iputils \
     && pecl install xdebug \
     && echo "zend_extension=/usr/lib64/php/modules/xdebug.so" > /etc/php.d/90-xdebug.ini \
     && sed -i -e "s/^listen.*sock$/listen = 0.0.0.0:9000/g" /etc/php-fpm.d/www.conf \
